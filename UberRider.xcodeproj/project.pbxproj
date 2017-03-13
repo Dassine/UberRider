@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2330300E1E74AE3F00A5C17C /* RiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330300D1E74AE3F00A5C17C /* RiderVC.swift */; };
+		233030161E7621EB00A5C17C /* DBProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233030151E7621EB00A5C17C /* DBProvider.swift */; };
+		233030181E7621F500A5C17C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233030171E7621F500A5C17C /* Constants.swift */; };
 		233567321E6E894000A6801F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233567311E6E894000A6801F /* AuthProvider.swift */; };
 		23C5EF591E6BAB85005FFE37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5EF581E6BAB85005FFE37 /* AppDelegate.swift */; };
 		23C5EF5B1E6BAB85005FFE37 /* SigninVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C5EF5A1E6BAB85005FFE37 /* SigninVC.swift */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		11564599D08C0B9AC736D87B /* Pods_UberRiderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberRiderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2330300D1E74AE3F00A5C17C /* RiderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiderVC.swift; sourceTree = "<group>"; };
+		233030151E7621EB00A5C17C /* DBProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBProvider.swift; sourceTree = "<group>"; };
+		233030171E7621F500A5C17C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		233567311E6E894000A6801F /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		23C5EF551E6BAB85005FFE37 /* UberRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C5EF581E6BAB85005FFE37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				233567311E6E894000A6801F /* AuthProvider.swift */,
+				233030151E7621EB00A5C17C /* DBProvider.swift */,
+				233030171E7621F500A5C17C /* Constants.swift */,
 			);
 			name = Plugins;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				23C5EF5A1E6BAB85005FFE37 /* SigninVC.swift */,
+				2330300D1E74AE3F00A5C17C /* RiderVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -492,8 +501,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				23C5EF611E6BAB85005FFE37 /* UberRider.xcdatamodeld in Sources */,
+				2330300E1E74AE3F00A5C17C /* RiderVC.swift in Sources */,
 				233567321E6E894000A6801F /* AuthProvider.swift in Sources */,
 				23C5EF5B1E6BAB85005FFE37 /* SigninVC.swift in Sources */,
+				233030181E7621F500A5C17C /* Constants.swift in Sources */,
+				233030161E7621EB00A5C17C /* DBProvider.swift in Sources */,
 				23C5EF591E6BAB85005FFE37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
-        <!--SigninVC-->
+        <!--RiderVC-->
         <scene sceneID="v2P-YD-R03">
             <objects>
-                <viewController id="0hI-qY-0MN" customClass="SigninVC" customModule="UberRider" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0hI-qY-0MN" customClass="RiderVC" customModule="UberRider" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WYS-TX-NMQ"/>
                         <viewControllerLayoutGuide type="bottom" id="G7j-sv-RCZ"/>
@@ -98,7 +98,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Rider" id="BIR-if-Fy4">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="B58-0E-vof"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="B58-0E-vof">
+                                            <connections>
+                                                <action selector="logout:" destination="0hI-qY-0MN" id="X2w-rE-HHa"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -110,10 +114,16 @@
                                 <rect key="frame" x="156" y="430" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Call Uber"/>
+                                <connections>
+                                    <action selector="callUber:" destination="0hI-qY-0MN" eventType="touchUpInside" id="pJX-48-Mqb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="MyMap" destination="EJu-po-dSn" id="EhC-Rg-374"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAD-LG-eYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
