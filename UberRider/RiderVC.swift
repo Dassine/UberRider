@@ -21,7 +21,7 @@ class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        initializeLocationManager()
     }
     
     
@@ -73,6 +73,8 @@ class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     }
     
     @IBAction func callUber(_ sender: Any) {
+        
+        UberHandler.instance.requestUber(latitude: Double(userLocation!.latitude), longitude: Double(userLocation!.longitude))
     }
     
     private func  alertUser(title: String, message: String)  {

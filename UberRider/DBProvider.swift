@@ -30,8 +30,19 @@ class DBProvider {
     }
     
     //Request Ref
+    var requestRef: FIRDatabaseReference {
+        
+        return dbRef.child(Constants.UBER_REQUEST)
+    }
+    
     
     //Accepter Ref
+    
+    var requestAcceptedRef: FIRDatabaseReference {
+        
+        return dbRef.child(Constants.UBER_ACCEPTED)
+    }
+    
     
     func saveUser(withID: String, email: String, password: String) {
         let data: Dictionary<String, Any> = [Constants.EMAIL: email, Constants.PASSWORD: password, Constants.IS_RIDER: true]
