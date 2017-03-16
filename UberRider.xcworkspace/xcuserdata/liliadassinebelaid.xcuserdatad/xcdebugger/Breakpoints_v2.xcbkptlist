@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UberRider/UberHandler.swift"
-            timestampString = "511147948.841447"
+            timestampString = "511334302.673651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "requestUber(latitude:longitude:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UberRider/RiderVC.swift"
-            timestampString = "511148121.613584"
+            timestampString = "511334883.621221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "locationManager(_:didUpdateLocations:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "driverAcceptedRequest(requestAccepted:driverName:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,14 +41,94 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "UberRider/RiderVC.swift"
-            timestampString = "511148310.57418"
+            filePath = "UberRider/UberHandler.swift"
+            timestampString = "511335344.871171"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "initializeLocationManager()"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "observeMessagesForRider()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UberRider.UberHandler.(observeMessagesForRider () -&gt; ()).(closure #3)"
+                  moduleName = "UberRider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liliadassinebelaid/Desktop/Swift-learning/UberRider/UberRider/UberHandler.swift"
+                  timestampString = "511335585.022664"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UberRider.UberHandler.(observeMessagesForRider () -&gt; ()).(closure #3)"
+                  moduleName = "UberRider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liliadassinebelaid/Desktop/Swift-learning/UberRider/UberRider/UberHandler.swift"
+                  timestampString = "511335585.026822"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "499">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UberRider/UberHandler.swift"
+            timestampString = "511335362.655706"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "observeMessagesForRider()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UberRider.UberHandler.observeMessagesForRider () -&gt; ()"
+                  moduleName = "UberRider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liliadassinebelaid/Desktop/Swift-learning/UberRider/UberRider/UberHandler.swift"
+                  timestampString = "511335585.034688"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "514">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "UberRider.UberHandler.(observeMessagesForRider () -&gt; ()).(closure #3)"
+                  moduleName = "UberRider"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liliadassinebelaid/Desktop/Swift-learning/UberRider/UberRider/UberHandler.swift"
+                  timestampString = "511335585.037648"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

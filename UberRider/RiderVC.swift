@@ -9,8 +9,9 @@
 import UIKit
 import MapKit
 
-class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
+class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UberController  {
 
+    @IBOutlet weak var callUberBtn: UIButton!
     
     @IBOutlet weak var MyMap: MKMapView!
     
@@ -18,10 +19,18 @@ class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
     private var userLocation: CLLocationCoordinate2D!
     private var riderLoaction: CLLocationCoordinate2D!
     
+    private var canCallUber = true
+    private var riderCancelledRequest = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeLocationManager()
+        
+        UberHandler.instance.observeMessagesForRider()
+    
+        UberHandler.instance.delegate = self;
     }
     
     
@@ -72,9 +81,46 @@ class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate  {
         }
     }
     
+    func canCallUber(delegateCalled: Bool) {
+    
+        if delegateCalled {
+            callUberBtn .setTitle("Cancel Uber", for: UIControlState.normal)
+            canCallUber = false
+        } else {
+            callUberBtn .setTitle("Call Uber", for: UIControlState.normal)
+            canCallUber = true 
+        
+        }
+    }
+    
+    func driverAcceptedRequest(requestAccepted: Bool, driverName: String) {
+    
+        if !riderCancelledRequest {
+            if requestAccepted {
+                
+                alertUser(title: "Uber Accepted", message: "\(driverName) accepted your uber request")
+            }
+        } else {
+        
+            UberHandler.instance.cancelUber()
+            alertUser(title: "Uber Cancelled", message: "\(driverName) cancelled your uber request")
+        }
+    }
+    
     @IBAction func callUber(_ sender: Any) {
         
-        UberHandler.instance.requestUber(latitude: Double(userLocation!.latitude), longitude: Double(userLocation!.longitude))
+        if userLocation != nil {
+            if canCallUber {
+                
+                UberHandler.instance.requestUber(latitude: Double(userLocation!.latitude), longitude: Double(userLocation!.longitude))
+            } else {
+            
+                riderCancelledRequest = true
+                UberHandler.instance.cancelUber()
+            }
+        
+        }
+        
     }
     
     private func  alertUser(title: String, message: String)  {

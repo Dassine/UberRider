@@ -54,6 +54,10 @@ class SigninVC: UIViewController {
                     
                 } else {
                     
+                    UberHandler.instance.rider = self.emailTextField.text!
+                    self.emailTextField.text = ""
+                    self.passwordTextField.text = ""
+                    
                     self.performSegue(withIdentifier: self.RIDER_SEGUE, sender: nil)
                 }
             })

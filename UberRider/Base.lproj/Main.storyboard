@@ -111,7 +111,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIA-uf-FWP">
-                                <rect key="frame" x="156" y="430" width="64" height="30"/>
+                                <rect key="frame" x="133" y="419" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Call Uber"/>
                                 <connections>
@@ -123,11 +123,12 @@
                     </view>
                     <connections>
                         <outlet property="MyMap" destination="EJu-po-dSn" id="EhC-Rg-374"/>
+                        <outlet property="callUberBtn" destination="xIA-uf-FWP" id="eJV-sr-UPN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAD-LG-eYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="38"/>
+            <point key="canvasLocation" x="805.60000000000002" y="37.331334332833585"/>
         </scene>
     </scenes>
 </document>
