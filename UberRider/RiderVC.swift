@@ -105,6 +105,8 @@ class RiderVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, U
             UberHandler.instance.cancelUber()
             alertUser(title: "Uber Cancelled", message: "\(driverName) cancelled your uber request")
         }
+        
+        riderCancelledRequest = false
     }
     
     @IBAction func callUber(_ sender: Any) {

@@ -74,6 +74,22 @@ class UberHandler {
                 }
             }
         }
+        
+        //Driver cancelled
+        DBProvider.instance.requestAcceptedRef.observe(FIRDataEventType.childRemoved) { (snapshot: FIRDataSnapshot) in
+            if let data = snapshot.value as? NSDictionary {
+                
+                if let name = data[Constants.NAME] as? String {
+                    if name == self.driver {
+                        self.driver = ""
+                        self.delegate?.driverAcceptedRequest(requestAccepted: false, driverName: name)
+                        
+                    }
+                    
+                }
+            }
+        }
+        
     }
     
     func requestUber(latitude: Double, longitude: Double) {
