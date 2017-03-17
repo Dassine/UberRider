@@ -12,6 +12,7 @@ protocol UberController : class {
     
     func canCallUber(delegateCalled: Bool)
     func driverAcceptedRequest(requestAccepted: Bool, driverName: String)
+    func updateDriverLocation(lat: Double, long: Double)
 }
 
 class UberHandler {
@@ -90,6 +91,23 @@ class UberHandler {
             }
         }
         
+        //Driver updating location
+        DBProvider.instance.requestAcceptedRef.observe(FIRDataEventType.childChanged) { (snapshot: FIRDataSnapshot) in
+            if let data = snapshot.value as? NSDictionary {
+                if let name = data[Constants.NAME] as? String {
+                    if name == self.driver {
+                        if let lat = data[Constants.LATITUDE] as? Double {
+                            if let long = data[Constants.LONGITUDE] as? Double {
+                                self.delegate?.updateDriverLocation(lat: lat, long: long)
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        
     }
     
     func requestUber(latitude: Double, longitude: Double) {
@@ -100,5 +118,11 @@ class UberHandler {
     
     func cancelUber() {
         DBProvider.instance.requestRef.child(rider_id).removeValue()
+    }
+    
+    
+    func updateRiderLocation(lat: Double, long: Double){
+    
+        DBProvider.instance.requestRef.child(rider_id).updateChildValues([Constants.LATITUDE: lat, Constants.LONGITUDE: long])
     }
 }
